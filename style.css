@@ -1,8 +1,9 @@
 
-   body {
+   head {
     background: black; /* Цвет фона */
     color: white; /* Цвет текста */
    }
+   body
    h1, h2, h3 { 
     font-family:"Arial Cyr",Geneva,Helvetica,sans-serif;
     color: red; 
