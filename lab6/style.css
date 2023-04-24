@@ -18,5 +18,23 @@ em {
     color: green;
 }
 @media print {
-    
+    h1,
+h2 {
+    text-align: right;
+    color: black;
+    font-family: sans-serif;
+}
+
+body {
+    color: black;
+    background-color: white;
+}
+
+p {
+    text-align: right;
+}
+
+em {
+    color: black;
+}
 }
