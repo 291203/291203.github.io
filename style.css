@@ -1,15 +1,19 @@
-body {
-    background: black; /* Цвет фона */
-    color: white; /* Цвет текста */
-   }
-   h1, h2, h3 { 
-    font-family:"Arial Cyr",Geneva,Helvetica,sans-serif;
-    color: red; 
+h1,
+h2 {
     text-align: right;
-  }
-  em {
-  	color: green;
-  }
-  p {
-   text-align: right;
-  }
+    color: red;
+    font-family: sans-serif;
+}
+
+body {
+    color: white;
+    background-color: black;
+}
+
+p {
+    text-align: right;
+}
+
+em {
+    color: green;
+}
