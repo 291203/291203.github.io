@@ -10,7 +10,8 @@
     let message;
     let num = prompt('Введите количество ворон','');
     let x;
-    x = num % 100;
+    x = num % 10;
+    y = num % 100;
     if(x > 1 && x < 5){
         alert ('На ветке сидит '+ num+ ' вороны')
     }
@@ -23,7 +24,7 @@
     else if(x == 0){
         alert ('На ветке сидит '+num+' ворон')
     }
-    else if(x>10 && x<20){
+    else if(y>10 && y<20){
         alert ('На ветке сидит '+num+' ворон')
     }
     else{
