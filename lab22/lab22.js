@@ -1,6 +1,8 @@
 function pow(x, n) {
     let result = x;
-  
+    if (n=0){
+        result = 1;
+    }
     for (let i = 1; i < n; i++) {
       result *= x;
     }
