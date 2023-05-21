@@ -25,7 +25,14 @@
   return 8; // :) сжульничаем!
     }
   </script>
+    describe("pow", function() {
 
+    it("возводит число в степень n", function() {
+      assert.equal(pow(2, 3), 8);
+      assert.equal(pow(3, 3), 27);
+    });
+  
+  });
   <!-- скрипт со спецификацией (describe, it...) -->
   <script src="test.js"></script>
 
