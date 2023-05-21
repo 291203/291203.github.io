@@ -1,8 +1,5 @@
 function pow(x, n) {
     let result = x;
-    if (n=0){
-        result = 1;
-    }
     for (let i = 1; i < n; i++) {
       result *= x;
     }
@@ -13,7 +10,7 @@ function pow(x, n) {
   let x = prompt("x?", '');
   let n = prompt("n?", '');
   
-  if (n < 0) {
+  if (n < 1) {
     alert(`Степень ${n} не поддерживается, используйте натуральное число`);
   } else {
     alert( pow(x, n) );
