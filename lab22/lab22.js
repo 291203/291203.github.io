@@ -1,25 +1,11 @@
-function pow(x, n) {
-    let result = x;
-    if(n > 0){
-        
-        for (let i = 1; i < n; i++) {
-        result *= x;
+
+    'use strict';
+    /**
+     * 
+     * @param {number} x возводимое в степень число
+     * @param {number} n СтепенЬ - натуральное
+     * @return {number} - число x в стпени n
+     */
+    function pow(x, n) {
+        return x**n;
     }
-}
-else if(n == 0){
-    result = 1;
-}
-else{
-    for (let i = 1; i > n; i--) {
-        result = sqrt(result);
-}
-}
-    return result;
-  }
-  
-  let x = prompt("x?", '');
-  let n = prompt("n?", '');
-  
-
-    alert( pow(x, n) );
-
