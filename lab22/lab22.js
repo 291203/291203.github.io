@@ -17,3 +17,15 @@
 
     return result;
     }
+    function factorial(n){
+
+    }
+    function fib(n){
+
+    }
+    function compare(){
+
+    }
+    function sum(){
+
+    }
