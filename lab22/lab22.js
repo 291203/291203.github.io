@@ -11,7 +11,7 @@ else if(n = 0){
 }
 else{
     for (let i = 1; i < n; i++) {
-        result = sqrt(x);
+        result = sqrt(result);
 }
 }
     return result;
