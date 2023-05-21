@@ -1,9 +1,19 @@
 function pow(x, n) {
     let result = x;
-    for (let i = 1; i < n; i++) {
-      result *= x;
+    if(n>0){
+        
+        for (let i = 1; i < n; i++) {
+        result *= x;
     }
-  
+}
+else if(n = 0){
+    result = x;
+}
+else{
+    for (let i = 1; i < n; i++) {
+        result /= x;
+}
+}
     return result;
   }
   
