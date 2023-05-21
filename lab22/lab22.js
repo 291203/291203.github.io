@@ -7,7 +7,7 @@ function pow(x, n) {
     }
 }
 else if(n = 0){
-    result == 1;
+    result = 1;
 }
 else{
     for (let i = 1; i > n; i--) {
