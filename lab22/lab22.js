@@ -25,7 +25,7 @@
     return result;
     }
     function fib(n){
-        if(n = 0){
+        if(n == 0){
             b = BigInt(0);
         }
         else{
