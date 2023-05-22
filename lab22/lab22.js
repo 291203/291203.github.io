@@ -20,7 +20,7 @@
     function factorial(n){
         let result = 1n;
         for (let i = 1; i <= n;i++){
-            result *= i;
+            result *= BigInt(i);
         }
     return result;
     }
