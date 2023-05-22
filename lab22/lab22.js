@@ -22,7 +22,7 @@
         for (let i = 1; i <= n;i++){
             result *= BigInt(i);
         }
-    return result;
+    return BigInt(result);
     }
     function fib(n){
 
