@@ -25,10 +25,10 @@
     return result;
     }
     function fib(n){
-        let a = 1;
-  let b = 1;
+        let a = BigInt(1);
+  let b = BigInt(1);
   for (let i = 3; i <= n; i++) {
-    let c = a + b;
+    let c = BigInt(a + b);
     a = b;
     b = c;
   }
