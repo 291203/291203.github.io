@@ -18,7 +18,7 @@
     return result;
     }
     function factorial(n){
-        let result = 1;
+        let result = 1n;
         for (let i = 1; i <= n;i++){
             result *= i;
         }
