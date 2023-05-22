@@ -25,10 +25,7 @@
     return result;
     }
     function fib(n){
-        if(n == 0){
-            b = BigInt(0);
-        }
-        else{
+        
         let a = BigInt(1);
   let b = BigInt(1);
   for (let i = 3; i <= n; i++) {
@@ -36,7 +33,6 @@
     a = b;
     b = c;
   }
-}
   return b;
     }
     function compare(){
