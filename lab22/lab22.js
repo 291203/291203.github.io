@@ -25,7 +25,11 @@
     return result;
     }
     function fib(n){
-
+        let result = BigInt(1);
+        for (let i = 0; i <= n;i++){
+            result = BigInt(i-1)+BigInt(i-2);
+        }
+    return result;
     }
     function compare(){
 
