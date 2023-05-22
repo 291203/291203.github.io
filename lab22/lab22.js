@@ -25,7 +25,7 @@
     return result;
     }
     function fib(n){
-        let a = BigInt(1);
+        let a = BigInt(0);
   let b = BigInt(1);
   for (let i = 3; i <= n; i++) {
     let c = BigInt(a + b);
