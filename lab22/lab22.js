@@ -18,11 +18,11 @@
     return result;
     }
     function factorial(n){
-        let result = 1n;
+        let result = BigInt(1);
         for (let i = 1; i <= n;i++){
             result *= BigInt(i);
         }
-    return BigInt(result);
+    return result;
     }
     function fib(n){
 
