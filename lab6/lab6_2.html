@@ -6,65 +6,61 @@
 <link type="text/css" rel="stylesheet" href="css/main.css">
 <style>
 .clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
-}
+			content: "";
+			display: table;
+			clear: both;
+		}
 
-#container{
-	position: relative;
-	margin: 0 20% 0 20%;
-	display: flex;
-	flex-direction: column;
-	background-color: white;
-	min-height: 100vh;
-	width: 60%;
-	padding: 10px 30px 10px 10px;
-}
+		#header {
+			background:  #e6f7f4;
+			height: 100px;
+			background-size: cover;
+		}
 
-#inner{
-	background-color: white;
-	height: 100%;
-}
+		#left {
+			background-image: url("pic/left.png");
+			width: 200px;
+			background-size: auto 100%;
+			float: left;
+		}
 
-#outer{
-	margin-top: 20px;
-	margin-bottom: 20px;
-	max-height: 75%;
-	min-height: 100px;
-}
-#header{
-	height: 100px;
-	width: 100%;
-	background-color: #e6f7f4
-}
-#left{
-	float: left;
-	width: 200px;
-	background-image: url("pic/left.png");
-	height: 500px;
+		#left ul li {
+			list-style-image: url("pic/plus.png");
+		}
+
+		#right {
+			padding-left: 20px;
+			background-image: url("pic/right.png");
+			width: 200px;
+			background-size: auto 100%;
+			float: right;
+		}
+
+		#center {
+			padding-left: 10px;
+			margin: 0 200px;
+			float: none;
+		}
+
+		#inner {
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+
+		#footer {
+			background: #efcef0;
+			background-size: cover;
+			height: 100px;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+		}
+
+		#end {
+			clear: both;
+		}
 	
-}
-#right{
-	float: right;
-	width: 200px;
-	background-image: url("pic/right.png");
-	height: 500px;
-}
-#center{
-	margin-left: 210px;
-	margin-right: 210px;
-}
-#footer{
-	margin-top: auto;
-	height: 100px;
-	width: 100%;
-	background-color: #efcef0;
-}
-ul{
-	list-style-image: url("pic/plus.png");
-}
- 
 </style>
 </head>
 <body>
@@ -72,20 +68,19 @@ ul{
 	<div id="header"></div>
 	<div id="outer">
 		<div id="inner">
-			<div id="left">
+			<div id="left" style="clear: inline-end">
 				<ul>
 					<li><a href="#">Камень</a></li>
 					<li><a href="#">Ножницы</a></li>
 					<li><a href="#">Бумага</a></li>
 				</ul>
 			</div>
-			<div id="right">right</div>
+			<div id="right" style="clear: inline-end">right</div>
 			<div id="center">center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center</div>
-			<div id="end" style="clear: both"></div>
+			<div id="end"></div>
 		</div>
 	</div>
 	<div id="footer"></div>
-	 
 </div>
 </body>
 </html>
