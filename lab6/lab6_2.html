@@ -1,38 +1,44 @@
 <!doctype html>
 <html lang="ru">
+
 <head>
-<meta charset="utf-8">
-<title>Главная страница</title>
-<link type="text/css" rel="stylesheet" href="css/main.css">
-<style>
-.clearfix::after {
+	<meta charset="utf-8">
+	<title>Главная страница</title>
+	<link type="text/css" rel="stylesheet" href="css/main.css">
+	<style>
+		.clearfix::after {
 			content: "";
 			display: table;
 			clear: both;
 		}
 
+		html,
+		body {
+			height: 100%;
+		}
+
 		#header {
-			background:  #e6f7f4;
+			background: #9ACEEB;
 			height: 100px;
 			background-size: cover;
 		}
 
 		#left {
-			background-image: url("pic/left.png");
+			background-image: url("left.png");
+			height: 200px;
 			width: 200px;
-			background-size: auto 100%;
 			float: left;
 		}
 
 		#left ul li {
-			list-style-image: url("pic/plus.png");
+			list-style-image: url("plus.png");
 		}
 
 		#right {
 			padding-left: 20px;
-			background-image: url("pic/right.png");
+			background-image: url("right.png");
+			height: 200px;
 			width: 200px;
-			background-size: auto 100%;
 			float: right;
 		}
 
@@ -46,12 +52,18 @@
 			padding-top: 10px;
 			padding-bottom: 10px;
 		}
+
+		#outer {
+			padding-bottom: 90px;
+		}
+
 		#container {
 			position: relative;
 			min-height: 100%;
 		}
+
 		#footer {
-			background: #efcef0;
+			background: pink;
 			background-size: cover;
 			position: absolute;
 			left: 0;
@@ -63,9 +75,9 @@
 		#end {
 			clear: both;
 		}
-	
-</style>
+	</style>
 </head>
+
 <body>
 	<div id="container">
 		<div id="header"></div>
@@ -91,4 +103,5 @@
 		<div id="footer"></div>
 	</div>
 </body>
+
 </html>
