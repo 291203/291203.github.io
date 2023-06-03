@@ -25,15 +25,20 @@
     return result;
     }
     function fib(n){
-        
-        let a = BigInt(1);
-  let b = BigInt(0);
-  for (let i = 3; i <= n; i++) {
-    let c = BigInt(a + b);
-    a = b;
-    b = c;
-  }
-  return b;
+        let a = 1n;
+    let b = 1n;
+    let c;
+    if (n==0) return 0;
+    if (n==1) return 1;
+    if (n==2) return 1;
+    for (let i = 3; i <= n; i++) {
+      c = a + b;
+      a = b;
+      b = c;
+    }
+    if (b==1n)
+      b = 0;
+    return b; 
     }
     function compare(){
 
