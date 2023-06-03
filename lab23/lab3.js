@@ -1,113 +1,71 @@
-'use strict';
-
-function getDecimal(num) {
-    let a = num.slice(num.indexOf('.'));
-    if (num.indexOf(".") == -1) {
+import {
+    fib
+} from './lab2.js';
+export function getDecimal(num) {
+    if (Math.trunc(num) == num) {
         return 0;
     }
-    let str = 0 + a;
-    if (Number(num) < 0) {
-        str = 1 - Number(str);
-        str = str.toFixed(a.length - 1);
+    else if (num < 0) {
+        return num - (-Math.ceil(-num));
     }
-    return str;
+
+    if (num > 1) {
+        return +(num - Math.trunc(num)).toFixed(2);
+    }
 }
 
-function ucFirst(str) {
-    if (!str) return str;
 
-    return str[0].toUpperCase() + str.slice(1);
+
+export function ucFirst(str) {
+    if (!str) {
+        return str;
+    }
+    else {
+        return str[0].toUpperCase() + str.slice(1);
+    }
 }
 
-function checkSpam(str) {
-    let firstWord = 'viagra';
-    let secondWord = 'xxx';
-    let thirdWord = 'ххх';
-    let string = str.toLowerCase();
-    let result;
 
-    if ( checkTheWord(firstWord) || checkTheWord(secondWord) || checkTheWord(thirdWord) ) {
-        return true;
+
+export function checkSpam(str) {
+    let NewStr = str.toLowerCase();
+    return NewStr.includes('viagra') || NewStr.includes('xxx');
+}
+
+
+
+export function truncate(str, maxlength) {
+    if (str.length < maxlength) {
+        return str;
     }
-    return false;
+    else {
+        return str.slice(0, maxlength - 1) + '…';
+    }
+}
 
-    function checkTheWord(word) {
-        for (let i = 0; i < string.length - 1; i++) {
-            if (string[i] == word[0]) {
-                result = string.slice(i, i + word.length);
-                if (result == word) {
-                    return true;
-                }
-                else return false;
-            }
-            else return false;
+
+
+export function  camelize(str){
+    let STR = str.split("-");
+    let StrNew = "";
+    for (let i = 0; i <= STR.length - 1; i++) {
+        if (i == 0) StrNew = STR[0];
+        else StrNew += ucFirst(STR[i]);
+    }
+    return StrNew;
+}
+export function fibs(n){  
+        let mas=[];
+        for(let i=0;i<n; i+=1){
+          mas.push(fib(i));
         }
-    }
+        return mas;
 }
-
-
-function truncate(str, maxlength) {
-    if (str.length > maxlength)
-        str = str.slice(0, maxlength - 1) + '\u{2026}';
-    return str;
+export function  arrReverseSorted(arr){
+    return arr.sort(function (a, b) {
+        return b - a;
+    })
 }
-
-
-function camelize(str) {
-    return str
-        .split('-')
-        .map(
-            (word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1)
-        )
-        .join('');
-}
-
-function fibs(N) {
-    let a = [];
-    let str = '';
-    if (!Number.isNaN(N))
-        if (N == 0) str = 0;
-        else
-            for (let j = 0; j < N; ++j) {
-                a[j] = fib(j);
-                str += a[j] + ' ';
-            }
-    else str = NaN;
-
-    return str;
-
-    function fib(j) {
-        let a = 1n;
-        let b = 1n;
-        let c;
-        if (j == 0) return 0;
-        if (j == 1) return 1;
-        if (j == 2) return 1;
-        for (let i = 3; i <= j; i++) {
-            c = a + b;
-            a = b;
-            b = c;
-        }
-        if (b == 1n)
-            b = 0;
-        return b;
-    }
-}
-
-
-function printNumbers(num, cols) {
-  let str1 = ""
-  let rows = Math.ceil(num / cols); //кол-во строк округлено в большую сторону
-  for (let row = 0; row < rows; ++row) {
-      let str = '';
-      for (let col = 0; col < cols; ++col) {
-          if ((row + rows * col) < num)
-              str += (row + rows * col) + ' ';
-      }
-      str1+=str+"\n";       
+  export function unique(arr){
+    return Array.from(new Set(arr));
   }
-  return str1;
-}
-function unique(arr) {
-return Array.from(new Set(arr));
-}
