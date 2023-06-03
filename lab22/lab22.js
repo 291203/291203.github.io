@@ -40,9 +40,20 @@
       b = 0;
     return b; 
     }
-    function compare(){
-
-    }
-    function sum(){
-
+    function compare(x) {
+        let result = function (y) {    
+            if (y > x) return true
+            else if (y < x) return false
+            else return null;        
+        }
+        return result;
+      }
+      function sum() {
+        let result = 0;
+    
+        for (let i = 0; i < arguments.length; i++) {
+            result += arguments[i];
+        }
+    
+        return result;
     }
