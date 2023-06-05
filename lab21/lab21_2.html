@@ -5,34 +5,35 @@
 
 
 
-  <script>
-    'use strict';
-    let message;
-    let num = prompt('Введите количество ворон','');
-    let x;
-    let y;
-    y = num % 100
-    if(y>10 && y<15){
-        alert ('На ветке сидит '+num+' ворон')
-    }
-    else {
-        x = num % 10;
-        if(x > 1 && x < 5){
-            alert ('На ветке сидит '+ num+ ' вороны')
+    <script>
+        'use strict';
+        let message;
+        let num = prompt('Введите количество ворон', '');
+        let x;
+        let y;
+        y = num % 100
+        if (y > 10 && y < 15) {
+            alert('На ветке сидит ' + num + ' ворон')
         }
-        else if(x >= 5){
-            alert ('На ветке сидит '+num+' ворон')
+        else {
+            x = num % 10;
+            if (x > 1 && x < 5) {
+                alert('На ветке сидит ' + num + ' вороны')
+            }
+            else if (x >= 5) {
+                alert('На ветке сидит ' + num + ' ворон')
+            }
+            else if (x == 1) {
+                alert('На ветке сидит ' + num + ' ворона')
+            }
+            else if (x == 0) {
+                alert('На ветке сидит ' + num + ' ворон')
+            }
+            else {
+                alert('Это как вообще')
+            }
         }
-        else if(x == 1){
-            alert ('На ветке сидит '+num+' ворона')
-        }
-        else if(x == 0){
-            alert ('На ветке сидит '+num+' ворон')
-        }
-        else{
-            alert ('Это как вообще')
-        }
-    }
-  </script>
+    </script>
 </body>
+
 </html>
