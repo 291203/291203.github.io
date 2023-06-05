@@ -1,28 +1,29 @@
 <!DOCTYPE HTML>
 <html lang="ru">
+
 <body>
   <script>
     "use strict";
     function isEmpty(obj) {
-  for (let key in obj) {
-    return false;
-  }
-  return true;
-}
+      for (let key in obj) {
+        return false;
+      }
+      return true;
+    }
     let book1 = {};
     alert(isEmpty(book1));
 
     book1.title = ":) hi hi";
-book1.pubYear = 12;
-book1.price = 13;
-alert(isEmpty(book1));
-let book2 = {
-    title: "Hello world",
-    pubYear: 666,
-    price: 999,
-};
-alert(isEmpty(book2));
-</script>
+    book1.pubYear = 12;
+    book1.price = 13;
+    alert(isEmpty(book1));
+    let book2 = {
+      title: "Hello world",
+      pubYear: 666,
+      price: 999,
+    };
+    alert(isEmpty(book2));
+  </script>
 </body>
 
 </html>

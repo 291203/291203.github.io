@@ -45,7 +45,7 @@ export function truncate(str, maxlength) {
 
 
 
-export function  camelize(str){
+export function camelize(str) {
     let STR = str.split("-");
     let StrNew = "";
     for (let i = 0; i <= STR.length - 1; i++) {
@@ -54,18 +54,18 @@ export function  camelize(str){
     }
     return StrNew;
 }
-export function fibs(n){  
-        let mas=[];
-        for(let i=0;i<n; i+=1){
-          mas.push(fib(i));
-        }
-        return mas;
+export function fibs(n) {
+    let mas = [];
+    for (let i = 0; i < n; i += 1) {
+        mas.push(fib(i));
+    }
+    return mas;
 }
-export function  arrReverseSorted(arr){
+export function arrReverseSorted(arr) {
     return arr.sort(function (a, b) {
         return b - a;
     })
 }
-  export function unique(arr){
+export function unique(arr) {
     return Array.from(new Set(arr));
-  }
+}
