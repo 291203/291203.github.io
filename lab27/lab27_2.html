@@ -29,16 +29,16 @@
 	<script>
 		'use strict';
 
-		let input = document.querySelector(".placeholder");
+		let input = document.querySelector(".dataplaceholder");
 		let div = document.querySelector("div");
 
 		input.onfocus = function () {
-			div.innerHTML = input.getAttribute("placeholder");
-			input.setAttribute("placeholder", "");
+			div.innerHTML = input.getAttribute("dataplaceholder");
+			input.setAttribute("dataplaceholder", "");
 		};
 
 		input.onblur = function () {
-			input.setAttribute("placeholder", div.innerHTML);
+			input.setAttribute("dataplaceholder", div.innerHTML);
 			div.innerHTML = "";
 		};
 
