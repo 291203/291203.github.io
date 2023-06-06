@@ -17,6 +17,8 @@
     <input type="text" data-placeholder="Ввод" class="placeholder">
     <script>
         'use strict';
+        let input = document.querySelector(".placeholder");
+        let div = document.querySelector("div");
         const inputs = document.querySelectorAll('input[data-placeholder]');
         inputs.forEach(input => {
             const placeholderText = input.getAttribute('data-placeholder');
