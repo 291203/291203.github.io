@@ -63,7 +63,8 @@ export function fibs(n) {
     return mas;
 }
 export function arrReverseSorted(arr) {
-    return arr.sort(function (a, b) {
+    let arr_copy = arr.slice();
+    return arr_copy.sort(function (a, b) {
         return b - a;
     })
 }
