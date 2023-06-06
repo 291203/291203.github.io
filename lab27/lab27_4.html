@@ -10,10 +10,6 @@
         .placeholder {
             color: blue;
         }
-        div{
-			color: blue;
-			font-size: 12px;
-		}
     </style>
 </head>
 
@@ -21,7 +17,6 @@
     <input type="text" data-placeholder="Ввод" class="placeholder">
     <script>
         'use strict';
-        let div = document.querySelector("div");
         const inputs = document.querySelectorAll('input[data-placeholder]');
         inputs.forEach(input => {
             const placeholderText = input.getAttribute('data-placeholder');
@@ -33,8 +28,6 @@
                 if (input.value === placeholderText) {
                     input.value = "";
                 }
-                div.innerHTML = input.getAttribute("data-placeholder");
-                input.setAttribute("data-placeholder", "строка");
             });
 
             input.addEventListener('blur', function () {
@@ -42,8 +35,6 @@
                     input.value = placeholderText;
                     input.classList.add('data-placeholder');
                 }
-                input.setAttribute("data-placeholder", div.innerHTML);
-                div.innerHTML = "";
             });
         });
     </script>
