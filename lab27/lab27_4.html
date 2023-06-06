@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Лаба 7_2</title>
+	<style>
+		.placeholder {
+			color: blue;
+		}
+	</style>
+</head>
+
+<body>
+    <script>
+    'use strict';
+	const inputs = document.querySelectorAll('input[data-placeholder]');
+    inputs.forEach(input=>{const placeholderText = input.getAttribute('data-placeholder');
+    input.value = placeholderText;
+    input.classList.add('placeholder');
+
+    input.addEventListener('focus',function(){input.classList.remove('placeholder');if(input.value === placeholderText){input.value = "";}});
+
+    input.addEventListener('blur',function(){if(input.value === ""){input.value = placeholderText;input.classList.add('placeholder');}});
+    });
+	</script>
+</body>
+
+</html>
