@@ -7,11 +7,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Лаба 7_2</title>
 	<style>
-		.data-placeholder:-moz-placeholder {
+		.placeholder:-moz-placeholder {
 			color: blue;
 		}
 
-		.data-placeholder::-webkit-input-placeholder {
+		.placeholder::-webkit-input-placeholder {
 			color: blue;
 		}
 
@@ -24,21 +24,21 @@
 
 <body>
 	<div></div>
-	<input type="text" class="data-placeholder" placeholder="строка">
+	<input type="text" class="placeholder" placeholder="строка">
 
 	<script>
 		'use strict';
 
-		let input = document.querySelector(".data-placeholder");
+		let input = document.querySelector(".placeholder");
 		let div = document.querySelector("div");
 
 		input.onfocus = function () {
-			div.innerHTML = input.getAttribute("data-placeholder");
-			input.setAttribute("data-placeholder", "");
+			div.innerHTML = input.getAttribute("placeholder");
+			input.setAttribute("placeholder", "");
 		};
 
 		input.onblur = function () {
-			input.setAttribute("data-placeholder", div.innerHTML);
+			input.setAttribute("placeholder", div.innerHTML);
 			div.innerHTML = "";
 		};
 
