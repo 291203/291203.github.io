@@ -10,6 +10,10 @@
         .placeholder {
             color: blue;
         }
+        div{
+			color: blue;
+			font-size: 12px;
+		}
     </style>
 </head>
 
@@ -39,6 +43,8 @@
                     input.value = placeholderText;
                     input.classList.add('placeholder');
                 }
+                input.setAttribute("placeholder", div.innerHTML);
+                div.innerHTML = "";
             });
         });
     </script>
