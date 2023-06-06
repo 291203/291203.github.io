@@ -28,8 +28,8 @@
                 if (input.value === placeholderText) {
                     input.value = "";
                 }
-                div.innerHTML = input.getAttribute("data-placeholder");
-                input.setAttribute("data-placeholder", "строка");
+                div.innerHTML = input.getAttribute("placeholder");
+                input.setAttribute("placeholder", "строка");
             });
 
             input.addEventListener('blur', function () {
